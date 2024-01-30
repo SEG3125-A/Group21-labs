@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Customer.css">
+
+    <title>Customer Page</title>
+  </head>
+  <body>
+    <center>
+      <div>
+        <input type="checkbox" id="vegetarianOption" />
+        <label for="vegetarianOption">Are you vegetarian?</label>
+      </div>
+
+      <br />
+
+      <div>
+        <input type="checkbox" id="noGlutenOption" />
+        <label for="noGlutenOption">Are you allergic to gluten?</label>
+      </div>
+
+      <br />
+
+      <div>
+        <input type="checkbox" id="organicOption" />
+        <label for="organicOption">Do you prefer organic?</label>
+      </div>
+
+      <br />
+
+      <div>
+        <button id="saveButton" onclick="saveChanges()">Save Changes</button>
+        <button id="resetButton" onclick="resetChanges()">Reset Options</button>
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+        <button id="goToCartPageButton" onclick="goToCartPage()">
+          Go To Cart
+        </button>
+
+        <button id="goToProductsPageButton" onclick="goToProductsPage()">
+          Go To Products
+        </button>
+      </div>
+      <div id="footer">
+        <p>Website designed by Nalan and Hamza</p>
+      </div>
+    </center>
+
+    <script src="Customer.js"></script>
+  </body>
+</html>

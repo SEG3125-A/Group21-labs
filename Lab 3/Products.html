@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Products.css" />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <center>
+      <div id="store name">
+        <center>
+          <h1>HamNal Grocer Co.</h1>
+        </center>
+      </div>
+      <div>
+        <button onclick="addToBasket(this)" id="itemChicken" price="10">
+          $10 - Chicken
+        </button>
+
+        <button onclick="addToBasket(this)" id="itemBeef" price="8">
+          $8 - Beef
+        </button>
+        <button onclick="addToBasket(this)" id="pomegranate" price="6">
+          $6 - Pomegranate
+        </button>
+        <button onclick="addToBasket(this)" id="itemApples" price="4">
+          $4 - Apples
+        </button>
+        <button onclick="addToBasket(this)" id="itemSoftDrink" price="2">
+          $2 - Soft Drink
+        </button>
+      </div>
+
+      <br />
+      <div>
+        <button onclick="addToBasket(this)" id="itemCandy" price="1">
+          $1 - Candy
+        </button>
+        <button onclick="addToBasket(this)" id="itemBread" price="3">
+          $3 - Loaf of Bread
+        </button>
+        <button onclick="addToBasket(this)" id="itemCake" price="5">
+          $5 - Cake
+        </button>
+        <button onclick="addToBasket(this)" id="itemGranolaBar" price="7">
+          $7 - Granola Bar
+        </button>
+        <button onclick="addToBasket(this)" id="itemBMBurger" price="9">
+          $9 - Beyond Meat Burger
+        </button>
+      </div>
+      <br />
+      <br />
+      <div>
+        <button id="submitCartButton" onclick="submitBasket()">
+          Confirm Selections
+        </button>
+      </div>
+      <br />
+      <br />
+      <div>
+        <button id="goToCartPageButton" onclick="goToCartPage()">
+          Go To Cart
+        </button>
+
+        <button id="goToCustomerPageButton" onclick="goToCustomerPage()">
+          Go To Customer
+        </button>
+      </div>
+      <div id="footer">
+        <p>Website designed by Nalan and Hamza</p>
+      </div>
+    </center>
+    <script src="Products.js"></script>
+  </body>
+</html>

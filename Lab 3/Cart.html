@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Cart.css">
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <center>
+      <div id="basket">
+        <textarea id="currentBasket" cols="40" rows="20"></textarea>
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+        <button id="goToProductsPageButton" onclick="goToProductsPage()">
+          Go To Products
+        </button>
+        <button id="goToCustomerPageButton" onclick="goToCustomerPage()">
+          Go To Customer
+        </button>
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+        <button id="checkoutButton" onclick="resetCart()">Checkout</button>
+      </div>
+      <div id="footer">
+        <p>Website designed by Nalan and Hamza</p>
+      </div>
+    </center>
+
+    <script src="Cart.js"></script>
+  </body>
+</html>
