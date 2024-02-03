@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Products.css" />
 
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Products.css" />
 
-  <body>
-    <center>
-      <div id="store name">
-        <center>
-          <h1>HamNal Grocer Co.</h1>
-        </center>
-      </div>
-      <div>
-        <button  onclick="addToBasket(this)" id="itemChicken" price="10">
+  <title>Document</title>
+</head>
+
+<body>
+  <center>
+    <div id="store name">
+      <center>
+        <h1>HamNal Grocer Co.</h1>
+      </center>
+    </div>
+
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"> <a href="#" onclick="showAll()"> Show All </a></li>
+        <li class="breadcrumb-item"> <a href="#" onclick="showOnlyFruits()"> Fruits </a></li>
+        <li class="breadcrumb-item"> <a href="#" onclick="showOnlyMeats()"> Meats </a></li>
+        <li class="breadcrumb-item"> <a href="#" onclick="showOnlyBakery()"> Bakery </a></li>
+        <li class="breadcrumb-item"> <a href="#" onclick="showOnlyCandy()"> Candy </a></li>
+
+
+      </ol>
+    </div>
+    <div>
+
+      <section id="Fruits">
+        <h2>Fruits</h2>
+        <button onclick="addToBasket(this)" id="pomegranate" price="6">
+          $6 - Pomegranate
+          <img src="Pics/pomegranite.png" width="100" height="100">
+        </button>
+
+        <button onclick="addToBasket(this)" id="itemApples" price="4">
+          $4 - Apples
+          <img src="Pics/apple.png" width="100" height="100">
+        </button>
+      </section>
+
+      <section id="Meats">
+        <h2>Meats</h2>
+        <button onclick="addToBasket(this)" id="itemChicken" price="10">
           $10 - Chicken
           <img src="Pics/chicken.png" width="150" height="100">
         </button>
@@ -24,53 +53,46 @@
         <button onclick="addToBasket(this)" id="itemBeef" price="8">
           $8 - Beef
           <img src="Pics/beef.png" width="100" height="100">
-
         </button>
-        <button onclick="addToBasket(this)" id="pomegranate" price="6">
-          $6 - Pomegranate
-          <img src="Pics/pomegranite.png" width="100" height="100">
 
-        </button>
-        <button onclick="addToBasket(this)" id="itemApples" price="4">
-          $4 - Apples
-          <img src="Pics/apple.png" width="100" height="100">
 
-        </button>
-        <button onclick="addToBasket(this)" id="itemSoftDrink" price="2">
-          $2 - Soft Drink
-          <img src="Pics/coke.png" width="50" height="100">
-
-        </button>
-      </div>
-
-      <br />
-      <div>
-        <button onclick="addToBasket(this)" id="itemCandy" price="1">
-          $1 - Candy
-          <img src="Pics/candy.png" width="100" height="100">
-
-        </button>
-        <button onclick="addToBasket(this)" id="itemBread" price="3">
-          $3 - Loaf of Bread
-          <img src="Pics/bread.png" width="100" height="100">
-
-        </button>
-        <button onclick="addToBasket(this)" id="itemCake" price="5">
-          $5 - Cake
-          <img src="Pics/cake.png" width="100" height="100">
-
-        </button>
-        <button onclick="addToBasket(this)" id="itemGranolaBar" price="7">
-          $7 - Granola Bar
-          <img src="Pics/granola.png" width="100" height="100">
-
-        </button>
         <button onclick="addToBasket(this)" id="itemBMBurger" price="9">
           $9 - Beyond Meat Burger
           <img src="Pics/burger.png" width="100" height="100">
-
         </button>
-      </div>
+      </section>
+
+      <section id="Bakery">
+        <h2>Bakery</h2>
+        <button onclick="addToBasket(this)" id="itemBread" price="3">
+          $3 - Loaf of Bread
+          <img src="Pics/bread.png" width="100" height="100">
+        </button>
+
+        <button onclick="addToBasket(this)" id="itemCake" price="5">
+          $5 - Cake
+          <img src="Pics/cake.png" width="100" height="100">
+        </button>
+      </section>
+
+      <section id="Candy">
+        <h2>Candy</h2>
+        <button onclick="addToBasket(this)" id="itemSoftDrink" price="2">
+          $2 - Soft Drink
+          <img src="Pics/coke.png" width="50" height="100">
+        </button>
+
+        <button onclick="addToBasket(this)" id="itemCandy" price="1">
+          $1 - Candy
+          <img src="Pics/candy.png" width="100" height="100">
+        </button>
+
+        <button onclick="addToBasket(this)" id="itemGranolaBar" price="7">
+          $7 - Granola Bar
+          <img src="Pics/granola.png" width="100" height="100">
+        </button>
+      </section>
+
       <br />
       <br />
       <div>
@@ -92,7 +114,8 @@
       <div id="footer">
         <p>Website designed by Nalan and Hamza</p>
       </div>
-    </center>
-    <script src="Products.js"></script>
-  </body>
+  </center>
+  <script src="Products.js"></script>
+</body>
+
 </html>

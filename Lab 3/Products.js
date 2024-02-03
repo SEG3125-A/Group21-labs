@@ -34,3 +34,36 @@ function goToCartPage() {
 function goToCustomerPage() {
   window.location.href = "Customer.html";
 }
+
+function showOnlyFruits(){
+  document.getElementById("Fruits").style.visibility = "visible";
+  document.getElementById("Meats").style.visibility = "hidden";
+  document.getElementById("Bakery").style.visibility = "hidden";
+  document.getElementById("Candy").style.visibility = "hidden";
+
+}
+function showOnlyMeats(){
+  document.getElementById("Fruits").style.visibility = "hidden";
+  document.getElementById("Meats").style.visibility = "visible";
+  document.getElementById("Bakery").style.visibility = "hidden";
+  document.getElementById("Candy").style.visibility = "hidden";
+}
+function showOnlyBakery(){
+  document.getElementById("Fruits").style.visibility = "hidden";
+  document.getElementById("Meats").style.visibility = "hidden";
+  document.getElementById("Bakery").style.visibility = "visible";
+  document.getElementById("Candy").style.visibility = "hidden";
+}
+function showOnlyCandy(){
+  document.getElementById("Fruits").style.visibility = "hidden";
+  document.getElementById("Meats").style.visibility = "hidden";
+  document.getElementById("Bakery").style.visibility = "hidden";
+  document.getElementById("Candy").style.visibility = "visible";
+}
+
+function showAll(){
+  document.getElementById("Fruits").style.visibility = "visible";
+  document.getElementById("Meats").style.visibility = "visible";
+  document.getElementById("Bakery").style.visibility = "visible";
+  document.getElementById("Candy").style.visibility = "visible";
+}

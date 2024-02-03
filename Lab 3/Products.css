@@ -35,3 +35,29 @@ button {
     bottom: 0;
     width: 100%;
 }
+
+.breadcrumb{
+    padding: 10px 16px;
+    list-style: none;
+    background-color: rgb(0, 0, 0);
+    }
+    
+  .breadcrumb-item{
+    display: inline;
+    font-size: 18px;
+    }
+  
+  .breadcrumb li+li:before{
+    padding: 8px;
+    color: black;
+    content: ">>";
+  }
+  
+  .breadcrumb-item a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .breadcrumb-item a:hover{
+    color: rgb(255, 255, 255);
+  }
