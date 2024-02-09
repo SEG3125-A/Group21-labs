@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nalsima Bike Repair</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\logo.jpg" alt="Logo" height="30"> Nalsima Bike Repair
+        </a>
+    </nav>
+
+    
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Services -->
+            <div class="col-md-4">
+                <h3>Services</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Brake Repair <span class="badge badge-primary">$20</span></li>
+                    <li class="list-group-item">Puncture Fix <span class="badge badge-primary">$15</span></li>
+                    <li class="list-group-item">Maintenance <span class="badge badge-primary">$30</span></li>
+                </ul>
+            </div>
+            <!-- Staff -->
+            <div class="col-md-4">
+                <h3>Our Staff</h3>
+                <div class="card">
+                    <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\Bike_mechanic_at_a_local_bike_shop.jpg" class="card-img-top" alt="Staff 1">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">Expert in bike repairs</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Booking Form -->
+            <div class="col-md-4">
+                <h3>Book a Service</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="service">Select Service:</label>
+                        <select class="form-control" id="service">
+                            <option>Brake Repair</option>
+                            <option>Puncture Fix</option>
+                            <option>Maintenance</option>
+                            
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Select Date:</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Select Time:</label>
+                        <input type="time" class="form-control" id="time">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">123 Main Street, City, State, ZIP | Phone: 123-456-7890 | Email: info@bikerepairshop.com</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>
