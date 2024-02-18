@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.card {
+    margin-top: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.footer {
+    background-color: #e9ecef; 
+    text-align: center;
+}
