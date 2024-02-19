@@ -25,8 +25,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\logo.jpg"
-                alt="Logo" height="30"> Nalsima Bike Repair
+            <img src="img/logo.jpg" alt="Logo" height="30"> Nalsima Bike Repair
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,8 +71,7 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                             data-parent="#accordion">
                             <div class="card-body">
-                                <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\Bike_mechanic_at_a_local_bike_shop.jpg"
-                                    class="card-img-top" alt="Staff 1">
+                                <img src="img/bikeMechanic1.jpg" class="card-img-top" alt="Staff 1">
                                 <p class="card-text">Expert in bike repairs</p>
                             </div>
                         </div>
@@ -81,17 +79,15 @@
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
                                     Magnus Carlsen
                                 </button>
                             </h5>
                         </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordion">
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body">
-                                <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\Bike_mechanic_at_a_local_bike_shop.jpg"
-                                    class="card-img-top" alt="Staff 2">
+                                <img src="img/bikeMechanic2.jpg" class="card-img-top" alt="Staff 2">
                                 <p class="card-text">Experienced bike mechanic</p>
                             </div>
                         </div>
@@ -119,7 +115,8 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Your Name:</label>
-                        <input type="text" class="form-control" id="name" pattern="[A-Za-z ]+" title="Name can only contain letters and spaces" required>
+                        <input type="text" class="form-control" id="name" pattern="[A-Za-z ]+"
+                            title="Name can only contain letters and spaces" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email:</label>
@@ -144,8 +141,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card">
-                    <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\Bike_mechanic_at_a_local_bike_shop.jpg"
-                        class="card-img-top" alt="Expert 1">
+                    <img src="img/bikeMechanic1.jpg" class="card-img-top" alt="Expert 1">
                     <div class="card-body">
                         <h5 class="card-title">Hikaru Nakamura</h5>
                         <p class="card-text">Expert in bike repairs</p>
@@ -154,8 +150,7 @@
             </div>
             <div class="col-md-6">
                 <div class="card">
-                    <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\Bike_mechanic_at_a_local_bike_shop.jpg"
-                        class="card-img-top" alt="Expert 2">
+                    <img src="img/bikeMechanic2.jpg" class="card-img-top" alt="Expert 2">
                     <div class="card-body">
                         <h5 class="card-title">Magnus Carlsen</h5>
                         <p class="card-text">Experienced bike mechanic</p>
@@ -199,28 +194,28 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+
     <script>
         function validatePhone(txtPhone) {
             var a = document.getElementById(txtPhone).value;
             var filter = /^(\([-+]?[0-9]+)\)$/;
             return filter.test(a);
         }
-    
-        var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
+
+        var unavailableDates = ["06/29/2020", "07/07/2020", "07/10/2020"];
         const setDateFormat = "mm/dd/yy";
-    
+
         function disableDates(date) {
             if (date.getDay() == 0) // Disable Sundays
                 return [false];
             var string = $.datepicker.formatDate(setDateFormat, date);
-            return [ unavailableDates.indexOf(string) == -1 ];
+            return [unavailableDates.indexOf(string) == -1];
         }
-    
-        $(document).ready(function(){
-    
-            $("#phone").on("change", function(){
-                if (!validatePhone("phone")){
+
+        $(document).ready(function () {
+
+            $("#phone").on("change", function () {
+                if (!validatePhone("phone")) {
                     alert("Wrong format for phone");
                     $("#phone").val("(xxxx)");
                     $("#phone").addClass("error");
@@ -229,35 +224,30 @@
                     $("#phone").removeClass("error");
                 }
             });
-    
-            $( "#dateInput" ).datepicker({
+
+            $("#dateInput").datepicker({
                 dateFormat: setDateFormat,
-                minDate: new Date('06/01/2020'),  
+                minDate: new Date('06/01/2020'),
                 maxDate: '+4M',
                 beforeShowDay: $.datepicker.noWeekends,
                 beforeShowDay: disableDates
             });
-    
-            $("#debit").on("mouseenter", function(){
+
+            $("#debit").on("mouseenter", function () {
                 $("#debit").addClass("showInput");
             });
-    
-            $("#debit").on("mouseleave", function(){
+
+            $("#debit").on("mouseleave", function () {
                 $("#debit").removeClass("showInput");
             });
-    
+
             $("#debit").tooltip({
                 classes: {
-                  "ui-tooltip": "highlight"
+                    "ui-tooltip": "highlight"
                 }
-              });
+            });
         });
     </script>
 </body>
 
 </html>
-
-
-
-
-
