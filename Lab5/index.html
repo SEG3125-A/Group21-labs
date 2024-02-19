@@ -8,20 +8,45 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        /* Reactive Input Fields */
+        input:hover,
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+    </style>
 </head>
+
 <body>
 
-    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="img/logo.jpg" alt="Logo" height="30"> Nalsima Bike Repair
+            <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\logo.jpg"
+                alt="Logo" height="30"> Nalsima Bike Repair
         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services"><i class="fas fa-tools"></i> Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experts"><i class="fas fa-users"></i> Experts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#payment"><i class="fas fa-credit-card"></i> Payment</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    
-    <div class="container mt-4">
+    <div class="container mt-4" id="services">
         <div class="row">
-            
             <div class="col-md-4">
                 <h3>Services</h3>
                 <ul class="list-group">
@@ -30,50 +55,47 @@
                     <li class="list-group-item">Maintenance <span class="badge badge-primary">$30</span></li>
                 </ul>
             </div>
-            
             <div class="col-md-4">
                 <h3>Our Staff</h3>
                 <div id="accordion">
-            
-                    
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
                                     Hikaru Nakamura
                                 </button>
                             </h5>
                         </div>
-            
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion">
                             <div class="card-body">
-                                <img src="img/Bike_mechanic_at_a_local_bike_shop.jpg" class="card-img-top" alt="Staff 1">
+                                <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\Bike_mechanic_at_a_local_bike_shop.jpg"
+                                    class="card-img-top" alt="Staff 1">
                                 <p class="card-text">Expert in bike repairs</p>
                             </div>
                         </div>
                     </div>
-            
-                    
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     Magnus Carlsen
                                 </button>
                             </h5>
                         </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordion">
                             <div class="card-body">
-                                <img src="img/Bike_mechanic_at_a_local_bike_shop.jpg" class="card-img-top" alt="Staff 2">
+                                <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\Bike_mechanic_at_a_local_bike_shop.jpg"
+                                    class="card-img-top" alt="Staff 2">
                                 <p class="card-text">Experienced bike mechanic</p>
                             </div>
                         </div>
                     </div>
-            
-                    
                 </div>
             </div>
-            
             <div class="col-md-4">
                 <h3>Book a Service</h3>
                 <form>
@@ -83,12 +105,11 @@
                             <option>Brake Repair</option>
                             <option>Puncture Fix</option>
                             <option>Maintenance</option>
-                            
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="date">Select Date:</label>
-                        <input type="date" class="form-control" id="date">
+                        <input type="text" class="form-control" id="date" readonly>
                     </div>
                     <div class="form-group">
                         <label for="time">Select Time:</label>
@@ -96,11 +117,18 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Your Name:</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" pattern="[A-Za-z ]+" title="Name can only contain letters and spaces" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email:</label>
                         <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="expert">Select Expert:</label>
+                        <select class="form-control" id="expert">
+                            <option>Hikaru Nakamura</option>
+                            <option>Magnus Carlsen</option>
+                        </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Book Now</button>
                 </form>
@@ -108,17 +136,87 @@
         </div>
     </div>
 
-    
+    <div class="container mt-4" id="experts">
+        <h3>Our Experts</h3>
+        <p>Meet our experts in bike repairs:</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\Bike_mechanic_at_a_local_bike_shop.jpg"
+                        class="card-img-top" alt="Expert 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Hikaru Nakamura</h5>
+                        <p class="card-text">Expert in bike repairs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="C:\Users\16132\OneDrive - University of Ottawa\Desktop\Group21-labs\Lab4\img\Bike_mechanic_at_a_local_bike_shop.jpg"
+                        class="card-img-top" alt="Expert 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Magnus Carlsen</h5>
+                        <p class="card-text">Experienced bike mechanic</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4" id="payment">
+        <h3>Payment</h3>
+        <p>Please provide your credit card information:</p>
+        <form>
+            <div class="form-group">
+                <label for="cardNumber">Credit Card Number:</label>
+                <input type="text" class="form-control" id="cardNumber" pattern="[0-9]{16}"
+                    title="Please enter a valid 16-digit credit card number" required>
+            </div>
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" class="form-control" id="expiryDate" pattern="(0[1-9]|1[0-2])\/[0-9]{2}"
+                    title="Please enter a valid expiry date in the format MM/YY" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" class="form-control" id="cvv" pattern="[0-9]{3}"
+                    title="Please enter a valid 3-digit CVV code" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Payment</button>
+        </form>
+    </div>
+
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
-            <span class="text-muted">75 Laurier Ave E, Ottawa, ON K1N 6N5 | Phone: 613-456-7890 | Email: info@bikerepairshop.com | Contact: Nalan, Hamza and Akram</span>
+            <span class="text-muted">75 Laurier Ave E, Ottawa, ON K1N 6N5 | Phone: 613-456-7890 | Email:
+                info@bikerepairshop.com | Contact: Nalan, Hamza and Akram</span>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootgostrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Enable datepicker
+            $('#date').datepicker({
+                minDate: 0
+            });
+
+            // Disable input fields on submit
+            $('form').submit(function() {
+                $(this).find("input, button, select").prop('disabled',true);
+            });
+        });
+    </script>
 </body>
 
-
 </html>
+
+
+
+
+
