@@ -9,6 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <style>
         /* Reactive Input Fields */
         input:hover,
@@ -109,7 +111,7 @@
                     </div>
                     <div class="form-group">
                         <label for="date">Select Date:</label>
-                        <input type="text" class="form-control" id="date" readonly>
+                        <input type="text" class="form-control" id="date">
                     </div>
                     <div class="form-group">
                         <label for="time">Select Time:</label>
@@ -194,22 +196,61 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
     <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-
-            // Enable datepicker
-            $('#date').datepicker({
-                minDate: 0
+        function validatePhone(txtPhone) {
+            var a = document.getElementById(txtPhone).value;
+            var filter = /^(\([-+]?[0-9]+)\)$/;
+            return filter.test(a);
+        }
+    
+        var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
+        const setDateFormat = "mm/dd/yy";
+    
+        function disableDates(date) {
+            if (date.getDay() == 0) // Disable Sundays
+                return [false];
+            var string = $.datepicker.formatDate(setDateFormat, date);
+            return [ unavailableDates.indexOf(string) == -1 ];
+        }
+    
+        $(document).ready(function(){
+    
+            $("#phone").on("change", function(){
+                if (!validatePhone("phone")){
+                    alert("Wrong format for phone");
+                    $("#phone").val("(xxxx)");
+                    $("#phone").addClass("error");
+                }
+                else {
+                    $("#phone").removeClass("error");
+                }
             });
-
-            // Disable input fields on submit
-            $('form').submit(function() {
-                $(this).find("input, button, select").prop('disabled',true);
+    
+            $( "#dateInput" ).datepicker({
+                dateFormat: setDateFormat,
+                minDate: new Date('06/01/2020'),  
+                maxDate: '+4M',
+                beforeShowDay: $.datepicker.noWeekends,
+                beforeShowDay: disableDates
             });
+    
+            $("#debit").on("mouseenter", function(){
+                $("#debit").addClass("showInput");
+            });
+    
+            $("#debit").on("mouseleave", function(){
+                $("#debit").removeClass("showInput");
+            });
+    
+            $("#debit").tooltip({
+                classes: {
+                  "ui-tooltip": "highlight"
+                }
+              });
         });
     </script>
 </body>
