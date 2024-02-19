@@ -9,7 +9,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <style>
         /* Reactive Input Fields */
@@ -183,6 +182,15 @@
         </form>
     </div>
 
+    <script>
+        $(document).ready(function () {
+            $("#date").datepicker({
+                dateFormat: 'mm/dd/yy',
+                showButtonPanel: true
+            });
+        });
+    </script>
+
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
             <span class="text-muted">75 Laurier Ave E, Ottawa, ON K1N 6N5 | Phone: 613-456-7890 | Email:
@@ -225,7 +233,7 @@
                 }
             });
 
-            $("#dateInput").datepicker({
+            $("#date").datepicker({
                 dateFormat: setDateFormat,
                 minDate: new Date('06/01/2020'),
                 maxDate: '+4M',
