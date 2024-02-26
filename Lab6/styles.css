@@ -1,0 +1,145 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-color: #ffffff;
+  align-content: center;
+  font-family: "Rubik";
+  font-size: 22px;
+  margin: 20px;
+}
+
+.Survey {
+  text-align: center;
+}
+
+.header-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  color: #000000;
+  text-align: center;
+  padding: 1em 0;
+}
+
+header {
+  background-color: #ffffff;
+  background-image: "images\ikea-ui.PNG";
+  background-position: center;
+  background-size: cover;
+}
+
+#header a {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+h1 {
+  color: FFFFFF;
+}
+
+#website-screenshot {
+  max-width: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.question {
+  text-align: left;
+  margin: 24px 0 24px 12px;
+}
+
+.question label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: medium;
+}
+.alignment-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alignment-container label {
+  display: flex;
+  align-items: center;
+  /*margin-bottom: 10px;*/
+  cursor: pointer;
+}
+
+.alignment-container input[type="checkbox"],
+.alignment-container input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  /*display: inline-flex;
+    align-self: flex-start;*/
+}
+
+.alignment-container input[type="checkbox"] {
+  display: inline-flex;
+  align-self: flex-start;
+}
+.alignment-container label span {
+  display: flex;
+  align-items: center;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+
+button {
+  background-color: #3d2ec4;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: auto;
+  display: block;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #000000;
+}

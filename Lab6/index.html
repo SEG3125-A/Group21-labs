@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="ikea icon" type="image/png" href="images\IKEA-Logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel= "stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <title>Ikea Website Feedback</title>
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <a href="https://www.ikea.com/ca/en/" target="_blank">
+                <img src="images\ikea-ui.PNG" alt="IKEA Website" class="header-image">
+            </a>
+
+            <a class="header_link" href="https://www.ikea.com/ca/en/" target="_blank">
+                <h1>Ikea Website Feedback</h1>
+            </a> 
+            
+            <h1>Ikea Website Feedback</h1>
+        </div>
+    </header>
+
+    <div class="Survey">
+        <h2>Please fill out the survey for better experience</h2>
+    </div>
+        <br>
+    <form>
+        <div class="Personal Info">
+            <h3>Personal Information</h3>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstname"></p>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastname"></p>
+
+            <label for="preferredcontactinfo">Contact Information: </label>
+                <textarea id="comments" name="comments" rows="1"></textarea>
+
+        </div>
+        <br>
+
+        <div class="question">
+            <label for="feedback">How would you rate the overall design of the website?</label>
+            <select id="feedback" name="feedback">
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+        </div>
+
+    
+        <div class="question">
+            <label>How easy is it to navigate through the website?</label>
+            <div class="alignment-container">
+                <input type="radio" id="easy" name="navigation" value="easy">
+                <label for="easy">Easy</label>
+                <input type="radio" id="difficult" name="navigation" value="difficult">
+                <label for="normal">Normal</label>
+                <input type="radio" id="very-difficult" name="navigation" value="very-difficult">
+                <label for="difficult">Difficult</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <label>What section of the website do you find most useful?</label>
+            <select id="useful-section" name="useful-section">
+                <option value="products">Products</option>
+                <option value="rooms">Rooms</option>
+                <option value="deals">Deals</option>
+                <option value="design-planning">Design & Planning</option>
+            </select>
+        </div>
+    
+        <div class="question">
+            <label>Which features do you think need improvement?</label>
+            <div class="alignment-container">
+                <input type="checkbox" id="search" name="features[]" value="search">
+                <label for="search">Search</label>
+                <input type="checkbox" id="navigation-menu" name="features[]" value="navigation-menu">
+                <label for="navigation-menu">Navigation Menu</label> 
+                <input type="checkbox" id="forms" name="features[]" value="forms">
+                <label for="forms">Closest Store Finder</label>
+            </div>  
+        </div>
+
+        <div class="question">
+            <label for="comments">Any additional comments or suggestions?</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+        <div class="question">
+            <label>How likely are you to recommend this website to others?</label>
+            <div class="alignment-container">
+                <input type="radio" id="likely" name="recommendation" value="likely">
+                <label for="likely">Likely</label>
+                <input type="radio" id="neutral" name="recommendation" value="neutral">
+                <label for="neutral">Neutral</label>
+                <input type="radio" id="unlikely" name="recommendation" value="unlikely">
+                <label for="unlikely">Unlikely</label>
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="footer">
+        <p>Website designed by Nalan and Hamza</p>
+    </div>
+
+</body>
+</html>
