@@ -1,34 +1,41 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Middleware
+const app = express();
+const PORT = 3000;
+
+// Middleware to parse incoming request bodies
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// Serve static files (e.g., CSS, images)
 app.use(express.static('public'));
 
-// Load questions from JSON file
-const questions = JSON.parse(fs.readFileSync('questions.json', 'utf8'));
-
-// Routes
+// Define routes
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.post('/submit', (req, res) => {
-    const answers = req.body;
-    // Save answers to a file or database
-    console.log('Submitted answers:', answers);
-    res.redirect('/result');
-});
+    // Compile the result of the survey
+    const result = {
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        feedback: req.body.feedback,
+        navigation: req.body.navigation,
+        'useful-section': req.body['useful-section'],
+        features: req.body.features,
+        comments: req.body.comments,
+        recommendation: req.body.recommendation
+    };
 
-app.get('/result', (req, res) => {
-    // Display the survey result page here
-    res.send('Survey result page');
+    // Save the result to a file
+    fs.appendFileSync('survey_results.json', JSON.stringify(result, null, 4) + ',\n');
+
+    res.send('Survey submitted successfully!');
 });
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server is running on port http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
