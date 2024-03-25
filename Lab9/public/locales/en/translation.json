@@ -1,0 +1,41 @@
+{
+    "title": "Hana Online Shopping",
+
+    "cart" : "cart",
+
+    "account": "Account",
+
+    "customer_service": "Customer Service",
+
+    "search": "Search",
+
+    "apple": "Apple",
+
+    "apple_description": "A Red Apple",
+
+    "banana": "Banana",
+
+    "banana_description": "A Ripe Banana",
+
+    "view_details": "View Details",
+
+    "add_to_cart": "Add To Cart",
+
+    "footer": "2024 Hana Online Shopping: All rights reserved",
+
+    "price": "price",
+
+    "customer_service_description": "How can we help you today?",   
+
+    "delete_account": "Delete Account",
+
+    "reset_password": "Reset Password",
+
+    "product_not_found": "Product not found!",
+
+    "back": "back"
+
+    
+  }
+
+  

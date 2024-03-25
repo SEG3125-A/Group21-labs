@@ -1,0 +1,40 @@
+{
+    "title": "Hana Shopping en ligne",
+
+    "cart" : "Chariot",
+
+    "account": "Compte",
+
+    "customer_service": "Service client",
+
+    "search": "Recherche",
+
+    "apple": "Pomme",
+
+    "apple_description": "Une pomme rouge",
+
+    "banana": "Banane",
+
+    "banana_description": "Une banane mûre",
+
+    "view_details": "Voir les détails",
+
+    "add_to_cart": "Ajouter au panier",
+
+    "footer": "2024 Hana Achats en ligne : Tous droits réservés",
+
+    "price": "Prix",
+
+    "customer_service_description": "Que peut-on faire pour vous aider aujourd'hui?",   
+
+    "delete_account": "Supprimer le compte",
+
+    "reset_password": "réinitialiser le mot de passe",
+
+    "product_not_found": "Produit non trouvé!",
+
+    "back": "dos"
+
+  }
+
+  
