@@ -11,7 +11,7 @@ class App extends React.Component {
     products: [
       { id: 1, name: 'Product 1', description: 'This is product 1', price: '$100' },
       { id: 2, name: 'Product 2', description: 'This is product 2', price: '$200' },
-      // Add more products as needed
+      //more products
     ],
     cart: [],
   };
